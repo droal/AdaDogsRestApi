@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val image = findViewById<ImageView>(R.id.imageView)
-        val imageService = RetrofitGenerator.getrandomImageService()
+        val imageService = RetrofitGenerator.getrandomImageService(this)
         loadNewImage(image, imageService)
 
         findViewById<Button>(R.id.button).setOnClickListener {
